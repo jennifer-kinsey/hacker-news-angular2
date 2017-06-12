@@ -7,12 +7,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { routing } from './app.routing';
 import { NewStoryComponent } from './new-story/new-story.component';
+import { CategoryPipePipe } from './category-pipe.pipe';
+import { JobPipe } from './job.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NewStoryComponent
+    NewStoryComponent,
+    JobPipe,
   ],
   imports: [
     BrowserModule,

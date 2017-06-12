@@ -7,12 +7,11 @@
       <li><a href="#">New</a></li>
       <li><a href="#">Show</a></li>
       <li><a href="#">Ask</a></li>
-      <li><a href="#">Jobs</a></li>
+      <li><a (change)="onChangeJob($event)">Jobs</a></li>
       <li><a href="#">Submit New Story</a></li>
     </ul>
   </div>
 </nav>
 <div class="container">
   <router-outlet></router-outlet>
-  <!-- <app-new-story></app-new-story> -->
 </div>

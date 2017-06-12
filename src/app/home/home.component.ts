@@ -14,12 +14,18 @@ import { StoryService } from '../story.service';
 export class HomeComponent implements OnInit {
   @Input() newStorySender: Story[];
 
+  filterByJob: string="jobs";
+
   stories: Story[];
 
   constructor(private router: Router, private storyService: StoryService) {}
 
   ngOnInit() {
     this.stories = this.storyService.getStories();
+  }
+
+  onChangeJob(optionFromMenu) {
+    this.filterByJob = optionFromMenu;
   }
 
   addStory(newStoryFromChild: Story) {
