@@ -6,10 +6,10 @@ import { Story } from '../story.model';
   templateUrl: './new-story.component.html',
   styleUrls: ['./new-story.component.css']
 })
-export class NewStoryComponent implements OnInit {
+export class NewStoryComponent {
 
   @Output() newStorySender = new EventEmitter();
-   formDisplay: boolean = false;
+   formDisplay = false;
 
    submitForm(
      title: string,
@@ -18,12 +18,12 @@ export class NewStoryComponent implements OnInit {
      category: string,
      id: number
      ) {
-     var newStoryToAdd: Story = new Story(title, url, username, category, id);
+     const newStoryToAdd: Story = new Story(title, url, username, category, id);
      this.newStorySender.emit(newStoryToAdd);
    }
 
    toggleEditForm() {
-     if(this.formDisplay === true) {
+     if (this.formDisplay === true) {
        this.formDisplay = false;
      } else {
        this.formDisplay = true;

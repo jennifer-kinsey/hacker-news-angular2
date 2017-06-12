@@ -2,3 +2,5 @@
   <h4><em>{{story.id}}. <img src="../assets/img/arrow.gif"/> {{story.title}}</em> <a href="{story.url}">({{story.url}})</a></h4>
   <h5>{{story.rank}} by {{story.username}}</h5>
 </div>
+
+<app-new-story (newStorySender)="addStory($event)"></app-new-story>
