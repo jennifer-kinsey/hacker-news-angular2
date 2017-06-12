@@ -1,5 +1,5 @@
 export class Story {
-   public rank: 0;
+   public rank = 0;
   constructor (
     public title: string,
     public url: string,

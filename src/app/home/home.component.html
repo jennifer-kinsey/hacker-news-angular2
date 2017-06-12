@@ -1,5 +1,4 @@
-<h2>Homepage</h2>
-
 <div *ngFor="let story of stories">
-    <h3><em>{{story.title}}</em> by {{story.username}}</h3>
+  <h4><em>{{story.id}}. <img src="../assets/img/arrow.gif"/> {{story.title}}</em> <a href="{story.url}">({{story.url}})</a></h4>
+  <h5>{{story.rank}} by {{story.username}}</h5>
 </div>

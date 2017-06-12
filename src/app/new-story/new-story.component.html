@@ -1,0 +1,28 @@
+<h3>Add
+    <input type="image" src="/resources/style/add.png"  *ngIf="!formDisplay" (click)='toggleEditForm()' /></h3>
+    <div *ngIf="formDisplay" id="edit-form">
+    <div>
+      <label>Enter New Story Title:</label><br>
+      <input #newStory><br>
+
+      <label>Enter Url:</label><br>
+      <input #newUrl><br>
+
+      <label>Enter Username:</label><br>
+      <input #newUsername><br>
+
+      <label>Enter Category:</label><br>
+      <input #newCategory><br>
+
+      <label>Enter Id:</label><br>
+      <input type='number' #newID><br>
+
+      <input type="image" src="/resources/style/add.png"  (click)='toggleEditForm()' (click)="
+            submitForm(newStory.value, newUrl.value, newUsername.value, newCategory.value, newID.value);
+            newTitle.value = '';
+            newUrl.value = '';
+            newUsername.value ='';
+            newCategory.value = '';
+            newID.value = '';
+      "/>
+    </div>
